@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqc0x306tuh3y"]
+
+[ext_resource type="PackedScene" uid="uid://dkdrk27rn8m62" path="res://PLATFORMS/moving_platform.tscn" id="2_2htwn"]
+
+[sub_resource type="Curve2D" id="Curve2D_du221"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -74, 0, 0, 0, 0, 0, -185)
+}
+point_count = 3
+
+[node name="Platform_path_up_down" type="Path2D"]
+curve = SubResource("Curve2D_du221")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotation = -1.5708
+rotates = false
+loop = false
+
+[node name="moving_platform" parent="PathFollow2D" instance=ExtResource("2_2htwn")]
+rotation = 1.5708

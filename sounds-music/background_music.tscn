@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cehonuvjrywfy"]
+
+[ext_resource type="AudioStream" uid="uid://cotuhaykggesl" path="res://sounds-music/tracks/Sciencenet Theme.mp3" id="1_s2ywu"]
+
+[node name="Background music" type="AudioStreamPlayer"]
+stream = ExtResource("1_s2ywu")
+autoplay = true

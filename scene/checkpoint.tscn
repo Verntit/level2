@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://iqhra7icbgeq"]
+
+[ext_resource type="Script" path="res://SCRIPT/Checkpoint.gd" id="1_xdfth"]
+[ext_resource type="Texture2D" uid="uid://cnw3mhc77rtp8" path="res://SPRITS/shitty flag.png" id="2_2ea8q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf4ce"]
+size = Vector2(11, 20)
+
+[node name="Checkpoint" type="Area2D"]
+script = ExtResource("1_xdfth")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_yf4ce")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.419608, 1, 0, 1)
+position = Vector2(1.05112, -1.23506)
+rotation = -6.28319
+scale = Vector2(0.528475, 0.789613)
+texture = ExtResource("2_2ea8q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3205ja2nrxp3"]
+
+[ext_resource type="Script" path="res://SCRIPT/PLAYER.gd" id="1_jxsn7"]
+[ext_resource type="Texture2D" uid="uid://do7ob7k4w7w2x" path="res://icon.svg" id="2_34t4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8aucl"]
+size = Vector2(122, 119)
+
+[node name="PLAYER" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_jxsn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_8aucl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_34t4k")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Dash_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Dash_again_timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="SlowMotionTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="regen_timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="DebugLabel" type="Label" parent="."]
+z_index = 100
+z_as_relative = false
+custom_minimum_size = Vector2(20, 20)
+offset_left = 788.0
+offset_top = -480.0
+offset_right = 828.0
+offset_bottom = -457.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+
+[connection signal="timeout" from="Dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="Dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
+[connection signal="timeout" from="SlowMotionTimer" to="." method="_on_slow_motion_timer_timeout"]
+[connection signal="timeout" from="regen_timer" to="." method="_on_regen_timer_timeout"]

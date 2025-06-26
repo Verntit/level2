@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4rlhw8bpedsc"]
+
+[ext_resource type="AudioStream" uid="uid://o6dhpyj2humj" path="res://sounds-music/tracks/Spec Ops.mp3" id="1_7nq6h"]
+
+[node name="Menu_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_7nq6h")
+volume_db = 1.0
+autoplay = true
+mix_target = 2

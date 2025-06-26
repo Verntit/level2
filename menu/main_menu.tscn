@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqxbgx0xw31jn"]
+
+[ext_resource type="Script" path="res://SCRIPT/main_menu.gd" id="1_mag6c"]
+[ext_resource type="PackedScene" uid="uid://b4rlhw8bpedsc" path="res://sounds-music/menu_music.tscn" id="2_rjcae"]
+[ext_resource type="AudioStream" uid="uid://ogvhltqgli27" path="res://sounds-music/background-music-soft-calm-ambient-335682.mp3" id="3_md2on"]
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mag6c")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 641.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Options"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Exit"
+
+[node name="Menu_music" parent="." instance=ExtResource("2_rjcae")]
+stream = ExtResource("3_md2on")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 113.0
+offset_right = 843.0
+offset_bottom = 389.0
+text = "contols:
+wasd and arrows both for movement left and right
+s and down arrow is a dash 
+space, up arrow and w are jumps
+Others:
+you can double jump, kinda wall jump/climb 
+there is also cyote time and jump buffer The longer
+you hold jump the higher you go"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

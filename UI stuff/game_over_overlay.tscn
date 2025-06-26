@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3b7ye7f77mht"]
+
+[ext_resource type="Script" path="res://SCRIPT/GameOverOverlay.gd" id="1_wlcmc"]
+
+[node name="GameOverOverlay" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_wlcmc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 174.0
+offset_top = 92.0
+offset_right = 1030.0
+offset_bottom = 215.0
+theme_override_font_sizes/font_size = 60
+text = "Game over"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 0.00784314, 0.709804, 1)
+offset_left = 135.0
+offset_top = 65.0
+offset_right = 1066.0
+offset_bottom = 586.0
+
+[node name="Respawn" type="Button" parent="."]
+modulate = Color(1, 1, 0, 1)
+offset_left = 538.0
+offset_top = 296.0
+offset_right = 653.0
+offset_bottom = 327.0
+text = "Respawn"
+
+[connection signal="pressed" from="Respawn" to="." method="_on_respawn_pressed"]
