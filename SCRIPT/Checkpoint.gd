@@ -27,7 +27,6 @@ func _on_body_entered(body):
 	modulate = Color.WHITE
 
 #var activated := false
-	#egrgsefesgf
 # Called when the node enters the scene tree for the first time.
 
 #	body_entered.connect(_on_body_entered)

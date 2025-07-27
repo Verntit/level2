@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://blhr15c0du5nf"]
+[gd_scene load_steps=10 format=3 uid="uid://blhr15c0du5nf"]
 
 [ext_resource type="PackedScene" uid="uid://b3205ja2nrxp3" path="res://scene/player.tscn" id="1_4pnxx"]
 [ext_resource type="PackedScene" uid="uid://c3iiques2sxsk" path="res://scene/tile_map.tscn" id="2_21tub"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://q25rd5xsx1ld" path="res://UI stuff/ui.tscn" id="5_s0wi6"]
 [ext_resource type="PackedScene" uid="uid://iqhra7icbgeq" path="res://scene/checkpoint.tscn" id="6_o4qjj"]
 [ext_resource type="PackedScene" uid="uid://chpdps14bn744" path="res://TILEMAP/flora_1.tscn" id="7_b6wym"]
+[ext_resource type="PackedScene" uid="uid://bgtjacm5y1u3x" path="res://scene/portalstuff.tscn" id="9_y411u"]
 
 [node name="Start_level" type="Node2D"]
 
@@ -41,3 +42,6 @@ layer_0/tile_data = PackedInt32Array(-262138, 983040, 3, -327673, 1048576, 2, -2
 
 [node name="PLAYER" parent="." instance=ExtResource("1_4pnxx")]
 position = Vector2(-100, -1124)
+
+[node name="Area2D" parent="." instance=ExtResource("9_y411u")]
+position = Vector2(-913, -3171)
