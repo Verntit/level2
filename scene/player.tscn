@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3205ja2nrxp3"]
 
 [ext_resource type="Script" path="res://SCRIPT/PLAYER.gd" id="1_jxsn7"]
-[ext_resource type="Texture2D" uid="uid://do7ob7k4w7w2x" path="res://icon.svg" id="2_34t4k"]
+[ext_resource type="Texture2D" uid="uid://ka5n4xneymsc" path="res://icon.svg" id="2_34t4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8aucl"]
 size = Vector2(122, 119)
@@ -26,7 +26,7 @@ zoom = Vector2(2, 2)
 wait_time = 0.2
 
 [node name="Dash_again_timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="SlowMotionTimer" type="Timer" parent="."]
 wait_time = 2.0

@@ -262,6 +262,7 @@ func handle_input(delta):
 		last_checkpoint = get_global_mouse_position()
 
 
+#test
 
 #setting dash to start and end
 	if Input.is_action_just_pressed("DASH") and can_dash:
