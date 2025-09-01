@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://jf03et6aos2g"]
+
+[ext_resource type="Script" path="res://SCRIPT/Vanishing platform.gd" id="1_lt6ul"]
+[ext_resource type="Texture2D" uid="uid://d4i2gmmgdnif8" path="res://SPRITS/Platform.png" id="2_ywgji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37b4g"]
+size = Vector2(55, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3x2p"]
+size = Vector2(58, 6)
+
+[node name="Vanishing platform" type="StaticBody2D"]
+script = ExtResource("1_lt6ul")
+
+[node name="VanishingTimer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_ywgji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 2)
+shape = SubResource("RectangleShape2D_37b4g")
+
+[node name="TriggerArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(-5, -22)
+shape = SubResource("RectangleShape2D_k3x2p")
+
+[connection signal="timeout" from="VanishingTimer" to="." method="_on_vanishing_timer_timeout"]
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
