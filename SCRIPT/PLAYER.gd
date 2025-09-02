@@ -42,7 +42,7 @@ var can_dash = true
 var is_wall_sliding = false
 var can_wall_jump = false
 var double_jump_available = true 
-
+var wall_jump_count = 0 
 
 #coyote time
 @export var coyote_time: float = 0.2
@@ -242,8 +242,10 @@ func handle_input(delta):
 			velocity.y = JUMP_VELOCITY
 			double_jump_available = true 
 			can_coyote_jump = false 
-		elif can_wall_jump:
+		elif can_wall_jump and wall_jump_count < 3:
 			velocity.y = wall_jump_force
+			wall_jump_count + 1 
+			print(wall_jump_count)
 		elif double_jump_available:
 			velocity.y = JUMP_VELOCITY
 			double_jump_available = false
