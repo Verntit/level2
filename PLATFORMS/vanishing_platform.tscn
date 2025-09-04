@@ -12,7 +12,10 @@ size = Vector2(58, 6)
 [node name="Vanishing platform" type="StaticBody2D"]
 script = ExtResource("1_lt6ul")
 
+[node name="Reset_Timer" type="Timer" parent="."]
+
 [node name="VanishingTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2.5, 2.5)
@@ -28,5 +31,6 @@ shape = SubResource("RectangleShape2D_37b4g")
 position = Vector2(-5, -22)
 shape = SubResource("RectangleShape2D_k3x2p")
 
+[connection signal="timeout" from="Reset_Timer" to="." method="_on_reset_timer_timeout"]
 [connection signal="timeout" from="VanishingTimer" to="." method="_on_vanishing_timer_timeout"]
 [connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
