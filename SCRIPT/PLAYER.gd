@@ -244,8 +244,11 @@ func handle_input(delta):
 			can_coyote_jump = false 
 		elif can_wall_jump and wall_jump_count < 3:
 			velocity.y = wall_jump_force
-			wall_jump_count + 1 
-			print(wall_jump_count)
+			wall_jump_count += 1 
+			print("wall_jump_count", wall_jump_count)
+		elif can_wall_jump and wall_jump_count >= 3:
+	# Can't wall jump anymore - limit reached
+			print("Wall jump limit reached!")
 		elif double_jump_available:
 			velocity.y = JUMP_VELOCITY
 			double_jump_available = false
@@ -296,6 +299,7 @@ func handle_movement(delta):
 		is_wall_sliding = false
 		can_wall_jump = false
 		double_jump_available = true 
+		wall_jump_count = 0 
 
 
 

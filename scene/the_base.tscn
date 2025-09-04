@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bvctgaeto3jhu"]
+[gd_scene load_steps=12 format=3 uid="uid://bvctgaeto3jhu"]
 
 [ext_resource type="PackedScene" uid="uid://b3205ja2nrxp3" path="res://scene/player.tscn" id="1_oggvq"]
 [ext_resource type="PackedScene" uid="uid://c3iiques2sxsk" path="res://scene/tile_map.tscn" id="2_8fqgc"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b3b7ye7f77mht" path="res://UI stuff/game_over_overlay.tscn" id="5_8501w"]
 [ext_resource type="PackedScene" uid="uid://q25rd5xsx1ld" path="res://UI stuff/ui.tscn" id="6_hou2d"]
 [ext_resource type="PackedScene" uid="uid://chpdps14bn744" path="res://TILEMAP/flora_1.tscn" id="7_ywcfj"]
-[ext_resource type="PackedScene" uid="uid://jf03et6aos2g" path="res://PLATFORMS/vanishing_platform.tscn" id="10_hil44"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g63uk"]
 texture = ExtResource("2_a8spg")
@@ -754,6 +753,3 @@ position = Vector2(1276, -5372)
 
 [node name="Checkpoint17" parent="." instance=ExtResource("4_5ax6b")]
 position = Vector2(1940, -3918)
-
-[node name="Vanishing platform" parent="." instance=ExtResource("10_hil44")]
-position = Vector2(826, -5322)
