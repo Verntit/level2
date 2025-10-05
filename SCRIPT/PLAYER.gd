@@ -242,7 +242,7 @@ func handle_input(delta):
 			velocity.y = JUMP_VELOCITY
 			double_jump_available = true 
 			can_coyote_jump = false 
-		elif can_wall_jump and wall_jump_count < 3:
+		elif can_wall_jump and wall_jump_count < 5:
 			velocity.y = wall_jump_force
 			wall_jump_count += 1 
 			print("wall_jump_count", wall_jump_count)
@@ -371,5 +371,3 @@ func _input(event):
 			last_checkpoint = get_global_mouse_position()
 			print("Debug Teleport: ", last_checkpoint)
 		
-
-
