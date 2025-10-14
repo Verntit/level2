@@ -38,7 +38,7 @@ var can_dash = true
 
 #wall slides/jumps and double jumps 
 @export var wall_jump_force = -400
-@export var wall_slide_speed = 5000
+@export var wall_slide_speed = 5400
 var is_wall_sliding = false
 var can_wall_jump = false
 var double_jump_available = true 
