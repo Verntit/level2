@@ -6,7 +6,7 @@ extends CharacterBody2D
 var last_checkpoint: Vector2 = Vector2(100, 100) # Default spawn position
 
 @onready var regen_timer = $regen_timer
-var health_regen_rate = 20  # How much health to regenerate per second
+var health_regen_rate = 40  # How much health to regenerate per second
 var health_regen_delay = 2  # How long to wait before regeneration starts (in seconds)
 var can_regenerate = true  # Whether health regeneration is allowed
 @onready var health_bar = $"../UI/HealthBar" # Path to the HealthBar
@@ -20,13 +20,13 @@ var health = 400  # Initialize at max health
  #camera shake
 @onready var camera = $Camera2D
 var shake_intensity = 0.0
-var shake_decay = 5.0  # How fast the shake stops
+var shake_decay = 2.5  # How fast the shake stops
 
 @onready var death_overlay = $"../GameOverOverlay"
 
-const FALL_DAMAGE_THRESHOLD = 450  # Speed at which damage starts
-const DAMAGE_MULTIPLIER =  10 #0.255  # Scale of damage taken
-var last_fall_velocity = 0        # Store velocity before landing
+const FALL_DAMAGE_THRESHOLD = 500  # Speed at which damage starts
+const DAMAGE_MULTIPLIER =  10  # Scale of damage taken
+var last_fall_velocity = 0  # Store velocity before landing
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600
