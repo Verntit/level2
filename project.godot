@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NCEA_Harrison_T_GAME"
-run/main_scene="res://menu/main_menu.tscn"
+run/main_scene="res://shadow_realm/menu/main_menu.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

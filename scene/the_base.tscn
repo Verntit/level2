@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bvctgaeto3jhu"]
+[gd_scene load_steps=13 format=3 uid="uid://bvctgaeto3jhu"]
 
 [ext_resource type="PackedScene" uid="uid://b3205ja2nrxp3" path="res://scene/player.tscn" id="1_oggvq"]
 [ext_resource type="PackedScene" uid="uid://c3iiques2sxsk" path="res://scene/tile_map.tscn" id="2_8fqgc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b3b7ye7f77mht" path="res://UI stuff/game_over_overlay.tscn" id="5_8501w"]
 [ext_resource type="PackedScene" uid="uid://q25rd5xsx1ld" path="res://UI stuff/ui.tscn" id="6_hou2d"]
 [ext_resource type="PackedScene" uid="uid://chpdps14bn744" path="res://TILEMAP/flora_1.tscn" id="7_ywcfj"]
+[ext_resource type="PackedScene" uid="uid://dkdrk27rn8m62" path="res://PLATFORMS/moving_platform.tscn" id="10_una3n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g63uk"]
 texture = ExtResource("2_a8spg")
@@ -751,3 +752,6 @@ position = Vector2(102, -1487)
 
 [node name="Checkpoint11" parent="." instance=ExtResource("4_5ax6b")]
 position = Vector2(1276, -5372)
+
+[node name="moving_platform" parent="." instance=ExtResource("10_una3n")]
+position = Vector2(165, -5867)
